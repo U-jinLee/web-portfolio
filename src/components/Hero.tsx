@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 py-12">
       <div className="container mx-auto max-w-4xl">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="flex-shrink-0">
@@ -12,17 +12,18 @@ const Hero = () => {
           </div>
 
           <div className="space-y-6 text-center md:text-left">
-            <h1 className="text-4xl md:text-4xl font-bold text-balance">
-              요청부터 응답까지, 데이터의 흐름으로 문제를 푸는 <span className="text-primary font-bold">백엔드 엔지니어</span>
-              <br />이유진입니다.
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground font-mono">Backend Engineer</p>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl text-balance">
-              클라이언트의 요청부터 서버 응답까지의 흐름을 기준으로 RESTful API와 DB 설계하고, 트래픽을 효율적으로 처리하는 구조를 구축합니다.<br />
-              <b>사용자 경험과 성능의 균형</b>을 고려하며, 도메인 정책 예외 흐름과 트랜잭션을 설계해 <b>데이터의 정합성과 서버의 안정성</b>을 확보합니다. 
+            <div className="space-y-0">
+              <p className="text-lg md:text-xl text-foreground text-left"><span className="text-primary"><b>요청</b></span>부터 <span className="text-primary"><b>응답</b></span>까지</p>
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight text-left">
+                데이터의 흐름으로 문제를 푸는 <span className="text-primary"><b>백엔드 엔지니어</b></span> 이유진입니다.
+              </h1>
+            </div>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl text-left">
+              클라이언트부터 서버까지 흐름을 기준으로 RESTful API와 DB를 설계하고, 트래픽을 효율적으로 처리하는 구조를 구축합니다.
+              <br /><b>사용자 경험과 성능</b>의 균형을 고려하며, 도메인 정책 예외 흐름과 트랜잭션을 설계해 <b>데이터의 정합성과 서버의 안정성</b>을 확보합니다. 
             </p>
 
-            <div className="flex items-center gap-4 pt-4 justify-center md:justify-start">
+            <div className="flex items-center gap-4 justify-center md:justify-start">
               <a
                 href="https://github.com/U-jinLee"
                 target="_blank"
@@ -35,18 +36,21 @@ const Hero = () => {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://diligent-mangosteen-06d.notion.site/Charm-s-Develop-Library-18299f0b98f749d9bcd607e1703b799a?source=copy_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.98-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.635-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/>
+                  </svg>
+
                 </svg>
               </a>
               <a
-                href="mailto:backend.dev@example.com"
+                href="mailto:yoojinlee.dev@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Email"
               >
@@ -60,6 +64,20 @@ const Hero = () => {
                 </svg>
               </a>
             </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-3 gap-6 pt-8">
+          <div className="bg-card border border-border rounded-lg p-6">
+            <div className="text-3xl font-bold text-primary mb-2">5<span className="text-xl">+</span></div>
+            <div className="text-muted-foreground">년 경력</div>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-6">
+            <div className="text-3xl font-bold text-primary mb-2">20<span className="text-xl">+</span></div>
+            <div className="text-muted-foreground">프로젝트</div>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-6">
+            <div className="text-3xl font-bold text-primary mb-2">10<span className="text-xl">+</span></div>
+            <div className="text-muted-foreground">기술스택</div>
           </div>
         </div>
       </div>

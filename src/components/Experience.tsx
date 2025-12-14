@@ -13,28 +13,28 @@ const Experience = () => {
       tags: ["Spring Boot", "Kubernetes", "PostgreSQL", "Redis"],
     },
     {
-      period: "2019.06 - 2021.02",
-      company: "이커머스 기업",
-      position: "Backend Developer",
-      description: [
-        "주문/결제 시스템 API 개발 및 유지보수",
-        "AWS 기반 인프라 구축 및 운영",
-        "CI/CD 파이프라인 구축으로 배포 시간 80% 단축",
-        "실시간 재고 관리 시스템 개발",
-      ],
-      tags: ["Django", "AWS", "MySQL", "Docker"],
-    },
-    {
-      period: "2018.03 - 2019.05",
-      company: "IT 서비스 기업",
-      position: "Junior Backend Developer",
+      period: "2021.11 - 2022.02",
+      company: "주식회사 푸드나무",
+      position: "서버 개발 / Intern / 백엔드 개발자",
       description: [
         "RESTful API 설계 및 구현",
         "데이터베이스 스키마 설계",
         "단위 테스트 및 통합 테스트 작성",
         "레거시 코드 리팩토링",
       ],
-      tags: ["Node.js", "MongoDB", "Express", "Git"],
+      tags: ["PHP", "JavaScript", "MySQL"],
+    },
+    {
+      period: "2021.04 - 2021.11",
+      company: "(주)지지옥션",
+      position: "정규직 · 연구소 · 연구원",
+      description: [
+        "주문/결제 시스템 API 개발 및 유지보수",
+        "AWS 기반 인프라 구축 및 운영",
+        "CI/CD 파이프라인 구축으로 배포 시간 80% 단축",
+        "실시간 재고 관리 시스템 개발",
+      ],
+      tags: ["ASP", "JavaScript", "MSSQL"],
     },
   ]
 
