@@ -68,7 +68,7 @@ const Hero = () => {
         </div>
         <div className="grid grid-cols-3 gap-6 pt-8">
           <div className="bg-card border border-border rounded-lg p-6">
-            <div className="text-3xl font-bold text-primary mb-2">5<span className="text-xl">+</span></div>
+            <div className="text-3xl font-bold text-primary mb-2">3<span className="text-xl">+</span></div>
             <div className="text-muted-foreground">년 경력</div>
           </div>
           <div className="bg-card border border-border rounded-lg p-6">

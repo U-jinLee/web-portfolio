@@ -5,7 +5,7 @@ const RightNavigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "skills", "experience", "projects", "contact"]
+      const sections = ["home", "skills", "experience", "projects", "education"]
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -36,7 +36,7 @@ const RightNavigation = () => {
     { id: "skills", label: "기술" },
     { id: "experience", label: "경력" },
     { id: "projects", label: "프로젝트" },
-    { id: "contact", label: "연락" },
+    { id: "education", label: "교육" },
   ]
 
   return (

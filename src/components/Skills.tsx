@@ -58,7 +58,7 @@ const Skills = () => {
   const infraSkills = [
     {
       techs: "CI/CD (GitHub Actions)",
-      description: " Github Actions와 ECR을 연동해, 코드 변경 사항을 EC2 서버에 반영하는 컨테이너 기반 자동 배포 파이프라인을 구축했습니다.",
+      description: " Github Actions와 ECR을 연동해 코드 변경 사항을 EC2 서버에 반영하는 컨테이너 기반 자동 배포 파이프라인을 구축했습니다.",
     },
     {
       techs: "Docker, Docker Compose",
@@ -110,7 +110,7 @@ const Skills = () => {
             <ul className="space-y-4">
               {backendSkills.map((skill, index) => (
                 <li key={index} className="text-sm md:text-base leading-relaxed pl-4 border-l-2 border-muted">
-                  <span className="text-primary font-bold">{skill.techs}</span>
+                  <span className="text-primary font-bold">{skill.techs}</span><br />
                   <span className="text-foreground/90">{skill.description}</span>
                 </li>
               ))}
@@ -125,7 +125,7 @@ const Skills = () => {
             <ul className="space-y-4">
               {frontendSkills.map((skill, index) => (
                 <li key={index} className="text-sm md:text-base leading-relaxed pl-4 border-l-2 border-muted">
-                  <span className="text-primary font-bold">{skill.techs}</span>
+                  <span className="text-primary font-bold">{skill.techs}</span><br />
                   <span className="text-foreground/90">{skill.description}</span>
                 </li>
               ))}
@@ -140,7 +140,7 @@ const Skills = () => {
             <ul className="space-y-4">
               {infraSkills.map((skill, index) => (
                 <li key={index} className="text-sm md:text-base leading-relaxed pl-4 border-l-2 border-muted">
-                  <span className="text-primary font-bold">{skill.techs}</span>
+                  <span className="text-primary font-bold">{skill.techs}</span><br />
                   <span className="text-foreground/90">{skill.description}</span>
                 </li>
               ))}
@@ -155,7 +155,7 @@ const Skills = () => {
             <ul className="space-y-4">
               {etcSkills.map((skill, index) => (
                 <li key={index} className="text-sm md:text-base leading-relaxed pl-4 border-l-2 border-muted">
-                  <span className="text-primary font-bold">{skill.techs}</span>
+                  <span className="text-primary font-bold">{skill.techs}</span><br />
                   <span className="text-foreground/90">{skill.description}</span>
                 </li>
               ))}
