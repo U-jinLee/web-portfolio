@@ -1,40 +1,48 @@
 const Experience = () => {
   const experiences = [
     {
-      period: "2021.03 - 현재",
-      company: "테크 스타트업",
-      position: "Senior Backend Engineer",
+      period: "2023.04 - 2023.09",
+      company: "주식회사네이처모빌리티",
+      position: "정규직 · MaaS 연구팀 · 백엔드 개발자",
       description: [
-        "마이크로서비스 아키텍처 기반 API 서버 설계 및 개발",
-        "Kubernetes를 활용한 컨테이너 오케스트레이션 구축",
-        "Redis 캐싱 전략 도입으로 응답 속도 70% 개선",
-        "데이터베이스 쿼리 최적화로 처리량 3배 향상",
+        "제휴사(J렌터카) 결제 연동 시스템 구축",
+        "결제 데이터 시각화 및 정산 내역 관리 어드민 페이지 개발",
+        "여행 중계 플랫폼 백엔드 개발 및 유지보수"
       ],
-      tags: ["Spring Boot", "Kubernetes", "PostgreSQL", "Redis"],
+      tags: ["Java", "Spring Boot", "JPA", "WebClient", "MySQL", "QueryDSL"],
+    },
+    {
+      period: "2022.03 - 2023.04",
+      company: "주식회사 텐스",
+      position: "정규직 · 백엔드 팀 · 백엔드 개발자",
+      description: [
+        "K 항공사 온라인 면세몰 고도화 프로젝트 상품 API 개발 및 고도화",
+        "K 스포츠 협회 쇼핑몰 쇼핑몰 구축",
+        "포인트몰 A사 어드민페이지 프론트엔드·백엔드 개발 및 서버 배포",
+        "N사 MYBOX 포토북 서비스 백엔드 개발 및 서버 배포",
+      ],
+      tags: ["Java", "Spring Boot", "JPA", "RDBMS", "Redis", "JavaScript", "Mustache", "AWS"],
     },
     {
       period: "2021.11 - 2022.02",
       company: "주식회사 푸드나무",
-      position: "서버 개발 / Intern / 백엔드 개발자",
+      position: "인턴 · 개발부서 · 백엔드 개발자",
       description: [
-        "RESTful API 설계 및 구현",
-        "데이터베이스 스키마 설계",
-        "단위 테스트 및 통합 테스트 작성",
-        "레거시 코드 리팩토링",
+        "랭킹닭컴, 개근질마트 운영/유지보수",
+        "카트 삭제 SQL 최적화 작업",
+        "상품 찜하기 기능 구현",
       ],
-      tags: ["PHP", "JavaScript", "MySQL"],
+      tags: ["PHP", "MySQL", "JavaScript"],
     },
     {
       period: "2021.04 - 2021.11",
       company: "(주)지지옥션",
-      position: "정규직 · 연구소 · 연구원",
+      position: "정규직 · 연구소 · 백엔드 개발자",
       description: [
-        "주문/결제 시스템 API 개발 및 유지보수",
-        "AWS 기반 인프라 구축 및 운영",
-        "CI/CD 파이프라인 구축으로 배포 시간 80% 단축",
-        "실시간 재고 관리 시스템 개발",
+        "지지옥션 모바일 앱 리뉴얼 및 유지보수",
+        "지도검색 내 로드뷰 기능 구현",
       ],
-      tags: ["ASP", "JavaScript", "MSSQL"],
+      tags: ["ASP", "MSSQL", "JavaScript"],
     },
   ]
 
@@ -58,7 +66,7 @@ const Experience = () => {
                 <ul className="space-y-2">
                   {exp.description.map((item, i) => (
                     <li key={i} className="text-muted-foreground flex items-start gap-2">
-                      <span className="text-primary mt-1">▹</span>
+                      <span className="text-primary">▹</span>
                       <span className="text-balance">{item}</span>
                     </li>
                   ))}
