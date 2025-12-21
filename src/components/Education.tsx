@@ -65,11 +65,6 @@ export function Education() {
   const certifications = [
     {
       period: "2024.08",
-      name: "정보처리기사 (필기 합격)",
-      organization: "한국산업인력공단",
-    },
-    {
-      period: "2024.08",
       name: "SQLD",
       organization: "한국데이터산업진흥원",
     },

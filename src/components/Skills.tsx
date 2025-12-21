@@ -6,11 +6,6 @@ const Skills = () => {
         " Java를 주력으로 사용하며, Kotlin의 문법과 Null Safety 이해를 바탕으로 필요 시 유연하게 활용합니다. DDD 및 Hexagonal Architecture를 적용 도메인과 인프라를 분리해 응집도 높고 유연한 아키텍처 설계를 지향합니다.",
     },
     {
-    techs: "JPA, QueryDSL",
-    description:
-      " 통계 조회 및 복잡한 동적 쿼리를 타입 세이프하게 구현합니다. Offset 기반 페이징의 한계를 파악 후 No-Offset 및 커버링 인덱스 방식을 통한 데이터 조회 성능을 개선했습니다.",
-    },
-    {
       techs: "Spring Security, JWT",
       description:
         " JWT 기반 Stateless 인증·인가 구조를 설계하고 구현했습니다. RTR(Refresh Token Rotation) 전략을 도입해 보안성과 사용자 편의성을 동시에 확보했습니다.",
@@ -21,17 +16,14 @@ const Skills = () => {
         " 관계형 데이터 모델링 기반 테이블 설계 및 정규화·반정규화를 수행했습니다. 정규화를 바탕으로 성능 병목 구간에 반정규화를 적용해 Trade-off를 고려한 모델링을 수행합니다.",
     },
     {
+    techs: "JPA, QueryDSL",
+    description:
+      " 통계 조회 및 복잡한 동적 쿼리를 타입 세이프하게 구현합니다. Offset 기반 페이징의 한계를 파악 후 No-Offset 및 커버링 인덱스 방식을 통한 데이터 조회 성능을 개선했습니다.",
+    },
+    {
       techs: "Redis",
       description: 
           " 캐싱과 Refresh Token 관리 및 ZSET 기반으로 경매 종료 스케줄링 로직을 설계했습니다. 서버 재시작이나 다중 인스턴스 환경에서 경매 종료가 안정적으로 처리되도록 상태 관리를 수행했습니다.",
-    },
-    {
-      techs: "JUnit5, Mockito, Jacoco, H2",
-      description: " JUnit5와 Mockito 그리고 H2를 활용해 가볍고 빠른 통합 테스트 환경을 구축해 비즈니스 로직을 검증합니다. Jacoco로 테스트 커버리지를 모니터링 합니다.",
-    },
-    {
-      techs: "REST Docs, Swagger",
-      description: " Swagger의 편의성과 REST Docs의 신뢰성을 프로젝트 상황에 맞게 활용해, 정확한 API 문서를 제공하여 프론트엔드와의 협업을 원활하게 이끕니다."    
     },
     {
       techs: "MSA",
@@ -65,29 +57,32 @@ const Skills = () => {
       description: " Docker Compose 기반 애플리케이션과 인프라를 통합 관리해 컨테이너 라이프사이클을 효율적으로 운영할 수 있습니다.",
     },
     {
-      techs: "AWS (EC2, RDS, S3, ECR, Route 53)",
+      techs: "AWS (EC2, RDS, S3, ECR, Route 53, EKS)",
       description: " EC2, RDS, S3를 연동해 서비스 인프라를 구축했습니다. ECR을 활용해 배포 이미지를 관리하며, Route 53을 통해 도메인 연결 및 DNS 설정을 수행했습니다.",
     },
     {
       techs: "Web Server & Reverse Proxy (Caddy, Nginx)",
       description: " Caddy를 도입해 SSL(HTTPS) 인증서 관리를 자동화했으며, 80/443 포트 요청을 프론트엔드 및 백엔드 서버로 라우팅하는 리버스 프록시 환경을 구축했습니다.",
     },
-    {
-      techs: "Kubernetes (EKS)",
-      description: " EKS 실습을 통해 오케스트레이션의 핵심 개념을 이해했으며, kubectl 명령어를 활용한 클러스터 리소스 관리가 가능합니다.",
-    },
   ]
 
   const etcSkills = [
     {
-      techs: "Collaboration (Git, Jira, Notion)",
-      description: " Git Flow 전략과 PR 기반 코드 리뷰로 코드 품질 향상에 기여합니다. Jira와 Notion을 활용 업무 관리 및 히스토리를 자산화합니다.",
+      techs: "JUnit5, Mockito, Jacoco, H2",
+      description: " JUnit5와 Mockito 그리고 H2를 활용해 가볍고 빠른 통합 테스트 환경을 구축해 비즈니스 로직을 검증합니다. Jacoco로 테스트 커버리지를 모니터링 합니다.",
+    },
+    {
+      techs: "REST Docs, Swagger",
+      description: " Swagger의 편의성과 REST Docs의 신뢰성을 프로젝트 상황에 맞게 활용해, 정확한 API 문서를 제공하여 프론트엔드와의 협업을 원활하게 이끕니다."    
     },
     {
       techs: "Legacy Experience (PHP, ASP)",
       description: " 다양한 언어 환경의 개발 경험을 보유하고 있습니다. 레거시 시스템 코드 분석 및 필요에 따라 현대적 아키텍처로 마이그레이션과 유지보수 할 수 있습니다.",
     },
-
+        {
+      techs: "Collaboration (Git, Jira, Notion)",
+      description: " Git Flow 전략과 PR 기반 코드 리뷰로 코드 품질 향상에 기여합니다. Jira와 Notion을 활용 업무 관리 및 히스토리를 자산화합니다.",
+    },
   ]
 
   return (
