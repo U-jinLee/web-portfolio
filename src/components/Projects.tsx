@@ -9,14 +9,14 @@ function Projects() {
     {
       title: "제주스타렌터카 예약·결제 브릿지 서버",
       type: "company" as const,
-      description: "실시간 예약 동기화 및 결제 중개 브릿지 서버 구축",
+      description: "실시간 예약·결제 중개 브릿지 서버 구축",
       tech: ["Java", "Spring Boot", "Spring Security", "QueryDSL", "MySQL", "Thymeleaf", "Apache POI"],
       features: [
         "WebClient 비동기 병렬 처리 도입 다건 환불 요청 시 응답 지연 시간 O(n) → O(1) 개선",
-        "제주스타렌터카 레거시 시스템과 네이처모빌리티 API 간 데이터 규격 변환 및 중계 브릿지 모듈 개발", 
+        "제주스타렌터카 ↔ 네이처모빌리티 API 데이터 규격 변환 및 중계 브릿지 모듈 개발",
+        "Thymeleaf 기반 정산 어드민 대시보드 및 프론트엔드 로직 구현", 
         "QueryDSL 커버링 인덱스를 적용 정산 데이터 조회 성능 개선",
-        "AOP 기반 예약 로깅 및 Encrytor 암호화 모듈 적용으로 데이터 추적 및 보안 강화",
-        "Thymeleaf 기반 정산 관리 어드민 대시보드 설계 및 프론트엔드 로직 구현", 
+        "AOP 기반 예약 로깅 및 Encrytor 암호화 모듈 적용으로 데이터 추적 및 보안 강화", 
         "Apache POI를 활용 정산 내역 엑셀 다운로드 및 암호화 적용",
         "예약·결제 상태 관리를 위한 정규화된 ERD 설계 및 데이터 모델링"
       ],
@@ -29,7 +29,7 @@ function Projects() {
         "보안 통신용 브릿지 서버 아키텍처, 비동기 논블로킹 트랜잭션 설계, QueryDSL 커버링 인덱스 최적화",
       images: [
         {
-          url: "./projects/zzimcar/booking.png",
+          url: "./projects/zzimcar/nature_mobility.png",
           caption: "시스템 아키텍처",
         },
         {
@@ -71,10 +71,9 @@ function Projects() {
       tech: ["Java", "Spring Boot", "JPA", "QueryDSL", "MySQL", "Redis", "AWS"],
       features: [
         "책임 연쇄 패턴 활용 유연한 동적 라벨링(신상품/세일) 로직 구현", 
-        "Flyweight 패턴 도입으로 ", 
         "QueryDSL 기반 다국어(KR/EN) 및 다통화 대응 동적 쿼리 개발",
-        "Spring Scheduler 활용 환율 변동에 따른 상품 가격 실시간 동기화 배치 구현",
-        "비회원 장바구니 기능 구현",
+        "Spring Scheduler 활용 환율 변동 상품 가격 실시간 동기화 구현",
+        "Redis 기반 임시 저장소를 통한 비회원 장바구니 기능 구현",
         "브랜드, 카테고리, 세일 등 다양한 필터링 조건을 처리하는 확장 가능한 검색 API 구축"
       ],
       github: "",
@@ -83,7 +82,7 @@ function Projects() {
       duration: "2022.06 - 2022.10",
       teamSize: "프론트엔드 2명 / 백엔드 3명",
       architecture:
-        "마이크로서비스 아키텍처 기반, Redis Cluster로 메시지 브로커 구현, MongoDB Sharding으로 데이터 분산 저장",
+        "마이크로서비스 아키텍처 기반, Redis Cluster로 캐싱 레이어 구현, 동적 쿼리 엔진 설계",
       images: [
         {
           url: "./projects/tenth/korean_air_product_english.png",
@@ -117,7 +116,7 @@ function Projects() {
       ],
       metrics: [
         { label: "상품 로딩 속도", value: "성능 대폭 개선", trend: "up" },
-        { label: "메시지 지연", value: "< 50ms", trend: "down" },
+        { label: "가격 동기화", value: "실시간", trend: "stable" },
         { label: "서버 가용성", value: "99.9%", trend: "stable" },
         { label: "다국어 대응", value: "KR/EN 완벽 지원", trend: "stable" },
       ],
@@ -277,27 +276,25 @@ function Projects() {
       title: "실시간 중고 경매 플랫폼 BCM",
       type: "personal" as const,
       description: "STOMP 및 Redis 기반 실시간 경매 플랫폼",
-      tech: ["Java", "Spring Boot", "STOMP(WebSocket)", "Redis", "PostgreSQL", "AWS"],
+      tech: ["Java", "Spring Boot", "STOMP(WebSocket)", "Redis", "PostgreSQL", "AWS", "Github Actions", "Docker"],
       features: [ 
-        "Redis ZSET 활용 스케줄러 도입으로 서버 재시작 시 경매 종료 이벤트 유실 방지", 
-        "S3 Presigned URL 도입을 통한 이미지 업로드 트래픽 분산 및 보안 강화",
-        "SMTP 이메일 링크와 Redis 임시 토큰 결합한 비밀번호 재설정 프로세스를 설계하여 계정 보안 수준 고도화",
-        "RTR 도입 및 ",
-        "Github Actions & Docker 기반 CI/CD 파이프라인 구축",
+        "Redis ZSET 도입을 통한 JDBC Store 대비 처리 속도 향상 및 경매 종료 작업 유실 방지",
+        "STOMP WebSocket 도입으로 Long Polling 방식 대비 네트워크 오버헤드 감소 및 실시간 호가 반영 구축",
+        "Github Actions & Docker 기반 CI/CD 구축 및 다중 인스턴스 환경에서의 중복 실행 방지 처리",
+        "S3 Presigned URL을 적용하여 이미지 업로드 트래픽을 서버에서 분리하고 EC2 리소스 부하 최소화",
+        "RTR 도입 및 Redis 블랙리스트 전략으로 토큰 탈취 시 재사용 공격 원천 차단",
+        "이메일 링크와 Redis 임시 토큰을 결합한 비밀번호 재설정 프로세스를 설계하여 계정 보안 수준 고도화",
       ],
       github: "https://github.com/kt-merge",
+      demo: "https://demo.example.com",
       role: "백엔드 개발자 리드 & 인프라 설계",
       duration: "2025.11 - 진행 중",
       teamSize: "프론트엔드 2명 / 백엔드 2명 / 인프라 1명",
-      architecture: "Kafka를 통한 실시간 스트리밍, Spark Streaming으로 데이터 변환, Elasticsearch로 검색 및 분석 제공",
+      architecture: "STOMP WebSocket 기반의 실시간 입찰 트랜잭션 처리, Redis Pub/Sub을 활용 확장 가능한 메시징 아키텍처",
       images: [
         {
           url: "./projects/bcm/chicken_erd.png",
           caption: "Project ERD",
-        },
-        {
-          url: "/elasticsearch-kibana-dashboard-visualization.jpg",
-          caption: "Elasticsearch 대시보드",
         },
         {
           url: "/kafka-monitoring-metrics-performance.jpg",
@@ -530,7 +527,7 @@ function Projects() {
                               prev === projects[selectedProject].images.length - 1 ? 0 : prev + 1,
                             )
                           }
-                          className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background transition-colors rounded-full p-2"
+                          className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background transition-colors roundedngtll p-2"
                         >
                           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
