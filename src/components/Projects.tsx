@@ -30,18 +30,18 @@ function Projects() {
       images: [
         {
           url: "./projects/zzimcar/nature_mobility.png",
-          caption: "시스템 아키텍처",
+          caption: "차량 예약·결제 중개 아키텍처",
+        },
+        {
+          url: "./projects/zzimcar/refund.png",
+          caption: "차량 환불 처리 프로세스",
         },
         {
           url: "./projects/zzimcar/booking.png",
-          caption: "Redis 클러스터 모니터링",
+          caption: "차량 예약 결제 화면",
         },
         {
-          url: "./projects/zzimcar/booking.png",
-          caption: "WebSocket 성능 메트릭",
-        },
-        {
-          url: "./projects/zzimcar/booking.png",
+          url: "./projects/zzimcar/admin.png",
           caption: "API 문서",
         },
       ],
@@ -86,32 +86,27 @@ function Projects() {
       images: [
         {
           url: "./projects/tenth/korean_air_product_english.png",
-          caption: "시스템 아키텍처",
+          caption: "프로젝트 메인 화면(EN)",
         },
         {
-          url: "/redis-cluster-monitoring-dashboard.jpg",
-          caption: "Redis 클러스터 모니터링",
+          url: "./projects/tenth/labeling_image.png",
+          caption: "상품 동적 라벨링",
         },
         {
-          url: "/websocket-performance-metrics-dashboard.jpg",
-          caption: "WebSocket 성능 메트릭",
+          url: "./projects/tenth/sale_product.png",
+          caption: "세일 상품 조회",
         },
         {
-          url: "/api-documentation-swagger.jpg",
-          caption: "API 문서",
+          url: "./projects/tenth/cart.png",
+          caption: "비회원 카트 구현",
         },
       ],
       challenges: [
         {
-          title: "동시 접속자 확장성 문제",
+          title: "동적 라벨링 구현의 복잡성 추가",
           solution:
-            "Redis Pub/Sub 패턴과 수평 확장을 통해 서버 간 메시지 동기화 구현. Kubernetes HPA로 자동 스케일링 적용.",
-          link: "https://example.com/blog/scaling-websocket",
-        },
-        {
-          title: "메시지 전송 지연 최소화",
-          solution: "WebSocket 연결 풀링과 메시지 배치 처리로 네트워크 오버헤드 50% 감소.",
-          link: "https://example.com/blog/websocket-optimization",
+            "책임 연쇄 패턴(Chain of Responsibility Pattern) 도입으로 라벨링 로직의 유연성 및 확장성 확보",
+          link: "https://diligent-mangosteen-06d.notion.site/3ea73c3a3249471bb878c425ad461776?source=copy_link",
         },
       ],
       metrics: [
@@ -515,7 +510,7 @@ function Projects() {
                               prev === 0 ? projects[selectedProject].images.length - 1 : prev - 1,
                             )
                           }
-                          className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background transition-colors rounded-full p-2"
+                          className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background transition-colors rounded-full p-3"
                         >
                           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -527,7 +522,7 @@ function Projects() {
                               prev === projects[selectedProject].images.length - 1 ? 0 : prev + 1,
                             )
                           }
-                          className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background transition-colors roundedngtll p-2"
+                          className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background transition-colors rounded-full p-3"
                         >
                           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

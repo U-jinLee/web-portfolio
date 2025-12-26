@@ -72,7 +72,7 @@ const Hero = () => {
             <div className="text-muted-foreground">년 경력</div>
           </div>
           <div className="bg-card border border-border rounded-lg p-6">
-            <div className="text-3xl font-bold text-primary mb-2">20<span className="text-xl">+</span></div>
+            <div className="text-3xl font-bold text-primary mb-2">6<span className="text-xl">+</span></div>
             <div className="text-muted-foreground">프로젝트</div>
           </div>
           <div className="bg-card border border-border rounded-lg p-6">
