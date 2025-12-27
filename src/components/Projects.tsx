@@ -42,7 +42,7 @@ function Projects() {
         },
         {
           url: "./projects/zzimcar/admin.png",
-          caption: "API 문서",
+          caption: "정산 어드민 대시보드",
         },
       ],
       challenges: [
@@ -103,9 +103,9 @@ function Projects() {
       ],
       challenges: [
         {
-          title: "동적 라벨링 구현의 복잡성 추가",
+          title: "동적 라벨링 구현 문제",
           solution:
-            "책임 연쇄 패턴(Chain of Responsibility Pattern) 도입으로 라벨링 로직의 유연성 및 확장성 확보",
+            "책임 연쇄 패턴 도입으로 라벨링 로직의 유연성 및 확장성 확보",
           link: "https://diligent-mangosteen-06d.notion.site/3ea73c3a3249471bb878c425ad461776?source=copy_link",
         },
       ],
@@ -131,20 +131,20 @@ function Projects() {
         "마이크로서비스 아키텍처 기반, Redis Cluster로 메시지 브로커 구현, MongoDB Sharding으로 데이터 분산 저장",
       images: [
         {
-          url: "/system-architecture-diagram-with-microservices.jpg",
-          caption: "시스템 아키텍처",
+          url: "./projects/tenth/main.png",
+          caption: "메인 페이지",
         },
         {
-          url: "/redis-cluster-monitoring-dashboard.jpg",
-          caption: "Redis 클러스터 모니터링",
+          url: "./projects/tenth/calander.png",
+          caption: "이벤트 캘린더",
         },
         {
-          url: "/websocket-performance-metrics-dashboard.jpg",
-          caption: "WebSocket 성능 메트릭",
+          url: "./projects/tenth/calander_detail.png",
+          caption: "이벤트 캘린더 상세",
         },
         {
-          url: "/api-documentation-swagger.jpg",
-          caption: "API 문서",
+          url: "./projects/tenth/event_page.png",
+          caption: "이벤트 페이지",
         },
       ],
       challenges: [
@@ -222,49 +222,101 @@ function Projects() {
         { label: "처리량", value: "5,000 msg/s", trend: "up" },
       ],
     },
+    // {
+    //   title: "N사 포토북 서비스 개발",
+    //   type: "company" as const,
+    //   description: "마이크로서비스 간 통신을 중앙화하고 인증, 로깅, 모니터링을 제공하는 API Gateway.",
+    //   tech: ["Java", "Spring Cloud Gateway", "Kubernetes", "Prometheus"],
+    //   features: ["초당 5만 요청 처리", "JWT 기반 인증/인가", "실시간 모니터링 대시보드"],
+    //   github: "https://github.com",
+    //   role: "풀스택 개발자",
+    //   duration: "2023.01 - 2023.05",
+    //   teamSize: "3명",
+    //   architecture:
+    //     "Spring Cloud Gateway를 활용한 라우팅, Circuit Breaker 패턴으로 장애 격리, Prometheus + Grafana로 모니터링",
+    //   images: [
+    //     {
+    //       url: "/api-gateway-architecture.png",
+    //       caption: "API Gateway 아키텍처",
+    //     },
+    //     {
+    //       url: "/grafana-monitoring-dashboard-with-metrics.jpg",
+    //       caption: "Grafana 모니터링 대시보드",
+    //     },
+    //     {
+    //       url: "/circuit-breaker-pattern-visualization.jpg",
+    //       caption: "Circuit Breaker 패턴",
+    //     },
+    //   ],
+    //   challenges: [
+    //     {
+    //       title: "높은 트래픽 처리",
+    //       solution: "비동기 Non-blocking I/O와 캐싱 전략으로 응답 시간 70% 개선.",
+    //       link: "https://example.com/blog/high-traffic-handling",
+    //     },
+    //     {
+    //       title: "인증/인가 성능",
+    //       solution: "JWT 토큰 검증을 Redis 캐싱으로 최적화하여 인증 오버헤드 80% 감소.",
+    //       link: "https://example.com/blog/jwt-optimization",
+    //     },
+    //   ],
+    //   metrics: [
+    //     { label: "요청 처리량", value: "50,000 req/s", trend: "up" },
+    //     { label: "평균 응답 시간", value: "15ms", trend: "down" },
+    //     { label: "에러율", value: "< 0.1%", trend: "down" },
+    //     { label: "가동 시간", value: "99.95%", trend: "stable" },
+    //   ],
+    // },
     {
-      title: "N사 포토북 서비스 개발",
-      type: "company" as const,
-      description: "마이크로서비스 간 통신을 중앙화하고 인증, 로깅, 모니터링을 제공하는 API Gateway.",
-      tech: ["Java", "Spring Cloud Gateway", "Kubernetes", "Prometheus"],
-      features: ["초당 5만 요청 처리", "JWT 기반 인증/인가", "실시간 모니터링 대시보드"],
-      github: "https://github.com",
-      role: "풀스택 개발자",
-      duration: "2023.01 - 2023.05",
-      teamSize: "3명",
-      architecture:
-        "Spring Cloud Gateway를 활용한 라우팅, Circuit Breaker 패턴으로 장애 격리, Prometheus + Grafana로 모니터링",
+      title: "실시간 중고 경매 플랫폼 BCM",
+      type: "personal" as const,
+      description: "STOMP 및 Redis 기반 실시간 경매 플랫폼",
+      tech: ["Java", "Spring Boot", "STOMP(WebSocket)", "Redis", "PostgreSQL", "AWS", "Github Actions", "Docker"],
+      features: [ 
+        "Redis ZSET 도입을 통한 JDBC Store 대비 처리 속도 향상 및 경매 종료 작업 유실 방지",
+        "STOMP WebSocket 도입으로 Long Polling 방식 대비 네트워크 오버헤드 감소 및 실시간 호가 반영 구축",
+        "Github Actions & Docker 기반 CI/CD 구축 및 다중 인스턴스 환경에서의 중복 실행 방지 처리",
+        "S3 Presigned URL을 적용하여 이미지 업로드 트래픽을 서버에서 분리하고 EC2 리소스 부하 최소화",
+        "RTR 도입 및 Redis 블랙리스트 전략으로 토큰 탈취 시 재사용 공격 원천 차단",
+        "이메일 링크와 Redis 임시 토큰을 결합한 비밀번호 재설정 프로세스를 설계하여 계정 보안 수준 고도화",
+      ],
+      github: "https://github.com/kt-merge",
+      demo: "https://demo.example.com",
+      role: "백엔드 개발자 리드 & 인프라 설계",
+      duration: "2025.11 - 진행 중",
+      teamSize: "프론트엔드 2명 / 백엔드 2명 / 인프라 1명",
+      architecture: "STOMP WebSocket 기반의 실시간 입찰 트랜잭션 처리, Redis Pub/Sub을 활용 확장 가능한 메시징 아키텍처",
       images: [
         {
-          url: "/api-gateway-architecture.png",
-          caption: "API Gateway 아키텍처",
+          url: "./projects/bcm/chicken_erd.png",
+          caption: "Project ERD",
         },
         {
-          url: "/grafana-monitoring-dashboard-with-metrics.jpg",
-          caption: "Grafana 모니터링 대시보드",
+          url: "/kafka-monitoring-metrics-performance.jpg",
+          caption: "Kafka 모니터링",
         },
         {
-          url: "/circuit-breaker-pattern-visualization.jpg",
-          caption: "Circuit Breaker 패턴",
+          url: "/data-flow-diagram-etl-process.jpg",
+          caption: "데이터 플로우",
         },
       ],
       challenges: [
         {
-          title: "높은 트래픽 처리",
-          solution: "비동기 Non-blocking I/O와 캐싱 전략으로 응답 시간 70% 개선.",
-          link: "https://example.com/blog/high-traffic-handling",
+          title: "서버 재실행 시 경매 종료 스케쥴 유실 및 운영 불안정",
+          solution: "서버 재시작 시 작업 유실 문제를 해결을 위해, Redis ZSET 기반 스케줄러를 도입 운영 안정성을 확보하고 처리 성능 개선",
+          link: "https://diligent-mangosteen-06d.notion.site/Redis-ZSET-2b61efebbf4c80289001fe529ccb9bb1?source=copy_link",
         },
         {
-          title: "인증/인가 성능",
-          solution: "JWT 토큰 검증을 Redis 캐싱으로 최적화하여 인증 오버헤드 80% 감소.",
-          link: "https://example.com/blog/jwt-optimization",
+          title: "서버를 통한 이미지 업로드 시 발생하는 메모리 부하 이슈",
+          solution: "S3 Presigned Upload URL 제공 API 구현 클라이언트가 스토리지에 직접 파일 업로드를 통한 서버 부하를 제거하고 보안성을 확보",
+          link: "https://diligent-mangosteen-06d.notion.site/Presigned-URL-9049823e48474891bc2ee72c68f33c9a?source=copy_link",
         },
       ],
       metrics: [
-        { label: "요청 처리량", value: "50,000 req/s", trend: "up" },
-        { label: "평균 응답 시간", value: "15ms", trend: "down" },
-        { label: "에러율", value: "< 0.1%", trend: "down" },
-        { label: "가동 시간", value: "99.95%", trend: "stable" },
+        { label: "처리량", value: "1TB/hour", trend: "up" },
+        { label: "처리 지연", value: "< 2 sec", trend: "down" },
+        { label: "데이터 무결성", value: "99.99%", trend: "stable" },
+        { label: "저장 효율", value: "40% 압축", trend: "up" },
       ],
     },
     {

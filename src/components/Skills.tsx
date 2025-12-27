@@ -6,7 +6,7 @@ const Skills = () => {
         " Java를 주력으로 사용하며, Kotlin의 문법과 Null Safety 이해를 바탕으로 필요 시 유연하게 활용합니다. DDD 및 Hexagonal Architecture를 적용 도메인과 인프라를 분리해 응집도 높고 유연한 아키텍처 설계를 지향합니다.",
     },
     {
-      techs: "Spring Security, JWT",
+      techs: "Spring Security",
       description:
         " JWT 기반 Stateless 인증·인가 구조를 설계하고 구현했습니다. RTR(Refresh Token Rotation) 전략을 도입해 보안성과 사용자 편의성을 동시에 확보했습니다.",
     },
@@ -16,7 +16,7 @@ const Skills = () => {
         " 관계형 데이터 모델링 기반 테이블 설계 및 정규화·반정규화를 수행했습니다. 정규화를 바탕으로 성능 병목 구간에 반정규화를 적용해 Trade-off를 고려한 모델링을 수행합니다.",
     },
     {
-    techs: "JPA, QueryDSL",
+    techs: "QueryDSL",
     description:
       " 통계 조회 및 복잡한 동적 쿼리를 타입 세이프하게 구현합니다. Offset 기반 페이징의 한계를 파악 후 No-Offset 및 커버링 인덱스 방식을 통한 데이터 조회 성능을 개선했습니다.",
     },
