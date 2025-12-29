@@ -1,9 +1,9 @@
 const Skills = () => {
   const backendSkills = [
     {
-      techs: "Java, Kotlin, Spring Boot",
+      techs: "Java, Spring Boot",
       description:
-        " Java를 주력으로 사용하며, Kotlin의 문법과 Null Safety 이해를 바탕으로 필요 시 유연하게 활용합니다. DDD 및 Hexagonal Architecture를 적용 도메인과 인프라를 분리해 응집도 높고 유연한 아키텍처 설계를 지향합니다.",
+        " DDD 및 Hexagonal Architecture를 적용 도메인과 인프라를 분리해 응집도 높고 유연한 아키텍처 설계를 지향합니다.",
     },
     {
       techs: "Spring Security",
@@ -29,11 +29,11 @@ const Skills = () => {
       techs: "MSA",
       description: " Monolithic to MSA 전환의 Trade-off를 이해하고 있습니다. 서비스 간 동기 통신(WebClient, Feign) 및 비동기 통신(Kafka)과 트랜잭션 분리 전략에 대한 개념을 갖추고 있습니다.",
     },
-    {
-      techs: "NestJS, MongoDB (Mongoose)",
-      description:
-        " NestJS와 MongoDB 활용 게시판 서비스를 구축한 경험이 있습니다. Document 기반의 스키마 설계를 이해하며, 요구사항에 맞춰 유연하게 기술을 유연하게 습득하고 활용할 수 있습니다.",
-    },
+    // {
+    //   techs: "NestJS, MongoDB (Mongoose)",
+    //   description:
+    //     " NestJS와 MongoDB 활용 게시판 서비스를 구축한 경험이 있습니다. Document 기반의 스키마 설계를 이해하며, 요구사항에 맞춰 유연하게 기술을 유연하게 습득하고 활용할 수 있습니다.",
+    // },
   ]
 
   const frontendSkills = [
@@ -66,24 +66,24 @@ const Skills = () => {
     },
   ]
 
-  const etcSkills = [
-    {
-      techs: "JUnit5, Mockito, Jacoco, H2",
-      description: " JUnit5와 Mockito 그리고 H2를 활용해 가볍고 빠른 통합 테스트 환경을 구축해 비즈니스 로직을 검증합니다. Jacoco로 테스트 커버리지를 모니터링 합니다.",
-    },
-    {
-      techs: "REST Docs, Swagger",
-      description: " Swagger의 편의성과 REST Docs의 신뢰성을 프로젝트 상황에 맞게 활용해, 정확한 API 문서를 제공하여 프론트엔드와의 협업을 원활하게 이끕니다."    
-    },
-    {
-      techs: "Legacy Experience (PHP, ASP)",
-      description: " 다양한 언어 환경의 개발 경험을 보유하고 있습니다. 레거시 시스템 코드 분석 및 필요에 따라 현대적 아키텍처로 마이그레이션과 유지보수 할 수 있습니다.",
-    },
-        {
-      techs: "Collaboration (Git, Jira, Notion)",
-      description: " Git Flow 전략과 PR 기반 코드 리뷰로 코드 품질 향상에 기여합니다. Jira와 Notion을 활용 업무 관리 및 히스토리를 자산화합니다.",
-    },
-  ]
+  // const etcSkills = [
+  //   {
+  //     techs: "JUnit5, Mockito, Jacoco, H2",
+  //     description: " JUnit5와 Mockito 그리고 H2를 활용해 가볍고 빠른 통합 테스트 환경을 구축해 비즈니스 로직을 검증합니다. Jacoco로 테스트 커버리지를 모니터링 합니다.",
+  //   },
+  //   {
+  //     techs: "REST Docs, Swagger",
+  //     description: " Swagger의 편의성과 REST Docs의 신뢰성을 프로젝트 상황에 맞게 활용해, 정확한 API 문서를 제공하여 프론트엔드와의 협업을 원활하게 이끕니다."    
+  //   },
+  //   {
+  //     techs: "Legacy Experience (PHP, ASP)",
+  //     description: " 다양한 언어 환경의 개발 경험을 보유하고 있습니다. 레거시 시스템 코드 분석 및 필요에 따라 현대적 아키텍처로 마이그레이션과 유지보수 할 수 있습니다.",
+  //   },
+  //       {
+  //     techs: "Collaboration (Git, Jira, Notion)",
+  //     description: " Git Flow 전략과 PR 기반 코드 리뷰로 코드 품질 향상에 기여합니다. Jira와 Notion을 활용 업무 관리 및 히스토리를 자산화합니다.",
+  //   },
+  // ]
 
   return (
     <section id="skills" className="min-h-screen flex items-center justify-center px-4 py-12">
@@ -142,7 +142,7 @@ const Skills = () => {
             </ul>
           </div>
 
-          <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors">
+          {/* <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-8 bg-primary rounded-full"></div>
               <h3 className="text-2xl font-bold">기타</h3>
@@ -155,7 +155,7 @@ const Skills = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

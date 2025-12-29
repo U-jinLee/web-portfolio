@@ -16,9 +16,9 @@ const Experience = () => {
       company: "주식회사 텐스",
       position: "정규직 · 백엔드 팀 · 백엔드 개발자",
       description: [
-        "K 항공사 온라인 면세몰 고도화 프로젝트 상품 API 개발 및 고도화",
-        "K 스포츠 협회 온라인 쇼핑몰 구축",
-        "포인트몰 A사 어드민페이지 프론트엔드·백엔드 개발 및 서버 배포",
+        "대한항공 SKY SHOP 고도화 프로젝트 상품 API 개발 및 고도화",
+        "대한축구협회 Play KFA 온라인 쇼핑몰 구축",
+        "애즈워드 어드민페이지 프론트엔드·백엔드 개발 및 서버 배포",
         "N사 MYBOX 포토북 서비스 백엔드 개발 및 서버 배포",
       ],
       tags: ["Java", "Spring Boot", "JPA", "RDBMS", "Redis", "JavaScript", "Mustache", "AWS"],
