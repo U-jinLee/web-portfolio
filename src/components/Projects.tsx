@@ -29,27 +29,27 @@ function Projects() {
         "보안 통신용 브릿지 서버 아키텍처, 비동기 논블로킹 트랜잭션 설계, QueryDSL 커버링 인덱스 최적화",
       images: [
         {
-          url: "./projects/zzimcar/nature_mobility.png",
-          caption: "차량 예약·결제 중개 아키텍처",
+          url: "./projects/zzimcar/star_booking.png",
+          caption: "스타렌터카 예약 화면",
         },
         {
-          url: "./projects/zzimcar/refund.png",
-          caption: "차량 환불 처리 프로세스",
+          url: "./projects/zzimcar/admin.png",
+          caption: "정산 어드민 대시보드",
         },
         {
           url: "./projects/zzimcar/booking.png",
           caption: "차량 예약 결제 화면",
         },
         {
-          url: "./projects/zzimcar/admin.png",
-          caption: "정산 어드민 대시보드",
+          url: "./projects/zzimcar/nature_mobility.png",
+          caption: "차량 예약·결제 중개 아키텍처",
         },
       ],
       challenges: [
         {
         title: "다중 환불 요청 시 선형적 응답 지연 문제",
         solution:"Loop 기반 동기 처리를 WebClient 기반 비동기·병렬 스트림으로 전환 성능 최적화 및 타임아웃 방지",
-        link: "",
+        link: "https://diligent-mangosteen-06d.notion.site/Sync-Async-2d81efebbf4c80cba356c04e2f1db8c9?source=copy_link",
         },
         {
           title: "대규모 예약/결제 데이터 조회 시 성능 저하",
@@ -79,7 +79,7 @@ function Projects() {
       github: "",
       demo: "https://www.koreanairdfs.com/",
       role: "백엔드 개발자",
-      duration: "2022.06 - 2022.10",
+      duration: "2022.11 - 2023.04",
       teamSize: "프론트엔드 2명 / 백엔드 3명",
       architecture:
         "마이크로서비스 아키텍처 기반, Redis Cluster로 캐싱 레이어 구현, 동적 쿼리 엔진 설계",
@@ -90,7 +90,7 @@ function Projects() {
         },
         {
           url: "./projects/tenth/labeling_image.png",
-          caption: "상품 동적 라벨링",
+          caption: "상품 동적 라벨링 화면",
         },
         {
           url: "./projects/tenth/sale_product.png",
@@ -98,7 +98,7 @@ function Projects() {
         },
         {
           url: "./projects/tenth/cart.png",
-          caption: "비회원 카트 구현",
+          caption: "비회원 카트 화면",
         },
       ],
       challenges: [
@@ -112,7 +112,6 @@ function Projects() {
       metrics: [
         { label: "상품 로딩 속도", value: "성능 대폭 개선", trend: "up" },
         { label: "가격 동기화", value: "실시간", trend: "stable" },
-        { label: "서버 가용성", value: "99.9%", trend: "stable" },
         { label: "다국어 대응", value: "KR/EN 완벽 지원", trend: "stable" },
       ],
     },
@@ -121,14 +120,18 @@ function Projects() {
       type: "company" as const,
       description: "KFA 공식 굿즈 판매 및 이벤트 관리를 위한 커머스 플랫폼",
       tech: ["Java", "Spring Boot", "QueryDSL", "MySQL", "Mustache"],
-      features: ["동시 접속자 10만명 처리", "메시지 전송 지연 50ms 이하", "자동 스케일링 구현"],
+      features: [
+        "월별 경기 일정 및 이벤트 캘린더 조회 기능",
+        "QueryDSL 기반의 다중 조건 검색(날짜, 팀, 유형) API",
+        "Mustache를 활용한 SSR 기반의 이벤트 페이지 렌더링",
+        "이벤트 참여 및 당첨자 관리 프로세스 구현",
+      ],
       github: "",
       demo: "https://www.playkfa.com/",
-      role: "상품 도메인 백엔드 API 개발",
-      duration: "2022.11 - 2023.04",
-      teamSize: "프론트엔드 2명 / 백엔드 3명",
-      architecture:
-        "마이크로서비스 아키텍처 기반, Redis Cluster로 메시지 브로커 구현, MongoDB Sharding으로 데이터 분산 저장",
+      role: "이벤트·캘린더 도메인 백엔드 개발",
+      duration: "2022.06 - 2022.10",
+      teamSize: "백엔드 2명",
+      architecture: "Spring Boot 기반의 단일 모듈 아키텍처(Monolithic) 및 MVC 패턴 적용, MySQL을 통한 정규화된 데이터 모델링",
       images: [
         {
           url: "./projects/tenth/main.png",
@@ -149,77 +152,60 @@ function Projects() {
       ],
       challenges: [
         {
-          title: "동시 접속자 확장성 문제",
-          solution:
-            "Redis Pub/Sub 패턴과 수평 확장을 통해 서버 간 메시지 동기화 구현. Kubernetes HPA로 자동 스케일링 적용.",
-          link: "https://example.com/blog/scaling-websocket",
-        },
-        {
-          title: "메시지 전송 지연 최소화",
-          solution: "WebSocket 연결 풀링과 메시지 배치 처리로 네트워크 오버헤드 50% 감소.",
-          link: "https://example.com/blog/websocket-optimization",
+          title: "복잡한 조건의 캘린더 데이터 조회 성능 최적화",
+          solution: "월별 조회 시 날짜 범위(Between)와 카테고리 필터에 의해 쿼리 복잡성 증가. QueryDSL BooleanBuilder 활용 동적 쿼리 생성 및 조회 빈도가 높은 컬럼에 인덱스를 적용해 쿼리 속도 개선",
+          link: "", // 관련 블로그 글이 없다면 생략 가능
         },
       ],
       metrics: [
-        { label: "동시 접속자", value: "100,000+", trend: "up" },
-        { label: "메시지 지연", value: "< 50ms", trend: "down" },
-        { label: "서버 가용성", value: "99.9%", trend: "stable" },
-        { label: "처리량", value: "5,000 msg/s", trend: "up" },
+      { label: "검색 최적화", value: "QueryDSL 적용", trend: "up" },
+      { label: "이벤트 트래픽", value: "안정적 처리", trend: "stable" }, // 대략적인 수치
+      { label: "응답 속도", value: "0.5s 미만", trend: "stable" }, // 목표치
       ],
     },
     {
       title: "포인트 적립형 쇼핑몰 애즈워드",
       type: "company" as const,
       description: "면세몰 상품 도메인 API 개발 및 고도화 담당",
-      tech: ["Java", "Spring Boot", "QueryDSL", "MySQL", "Redis", "AWS"],
+      tech: ["Java", "Spring Boot", "QueryDSL", "MySQL", "Mustache", "AWS"],
       features: [
-        "WebClient 활용 외부 포인트 시스템 연동 및 타임아웃·재시도 전략 수립",
-        "EC2 및 Shell script 기반 빌드·배포 자동화 스크립트 작성",
-        "상품, 이벤트, 회원 관리 통합 백오피스(Admin) 시스템 구축",
+      "WebClient를 활용한 외부 포인트 시스템 연동",
+      "상품, 이벤트, 회원 관리를 위한 백오피스(Admin) 시스템 구축",
+      "Spring Security 기반의 관리자 권한 관리 및 인증 보안 적용",
+      "Shell Script 작성을 통한 EC2 서버 빌드 및 배포 프로세스 자동화"
       ],
       github: "",
-      demo: "https://demo.example.com",
-      role: "백엔드 개발자",
-      duration: "2022.06 - 2022.10",
+      demo: "https://adsward.co.kr/",
+      role: "백엔드 개발 및 어드민 시스템 구축",
+      duration: "2022.05 - 2022.08",
       teamSize: "프론트엔드 2명 / 백엔드 3명",
-      architecture:
-        "마이크로서비스 아키텍처 기반, Redis Cluster로 메시지 브로커 구현, MongoDB Sharding으로 데이터 분산 저장",
+      architecture: 
+      "Spring Boot 기반의 단일 모듈 아키텍처(Monolithic), AWS EC2 및 S3를 활용한 인프라 구성과 MySQL RDBMS 설계",
       images: [
         {
-          url: "/system-architecture-diagram-with-microservices.jpg",
-          caption: "시스템 아키텍처",
+          url: "./projects/tenth/adsward_admin.png",
+          caption: "애즈워드 어드민",
         },
         {
-          url: "/redis-cluster-monitoring-dashboard.jpg",
-          caption: "Redis 클러스터 모니터링",
+          url: "./projects/tenth/adsward_main.png",
+          caption: "메인 페이지",
         },
         {
-          url: "/websocket-performance-metrics-dashboard.jpg",
-          caption: "WebSocket 성능 메트릭",
-        },
-        {
-          url: "/api-documentation-swagger.jpg",
-          caption: "API 문서",
+          url: "./projects/tenth/adsward_service.jpg",
+          caption: "애즈워드 서비스",
         },
       ],
       challenges: [
         {
-          title: "동시 접속자 확장성 문제",
-          solution:
-            "Redis Pub/Sub 패턴과 수평 확장을 통해 서버 간 메시지 동기화 구현. Kubernetes HPA로 자동 스케일링 적용.",
-          link: "https://example.com/blog/scaling-websocket",
-        },
-        {
-          title: "메시지 전송 지연 최소화",
-          solution: "WebSocket 연결 풀링과 메시지 배치 처리로 네트워크 오버헤드 50% 감소.",
-          link: "https://example.com/blog/websocket-optimization",
+          title: "수동 배포의 비효율성 및 인적 오류 개선",
+          solution: "반복되는 빌드/배포 작업을 개선하기 위해 Shell Script 작성, Git Pull부터 Build 그리고 실행까지 과정을 스크립트로 자동화해 배포 시간을 단축 및 운영 실수를 방지",
+          link: "",
         },
       ],
       metrics: [
-        { label: "동시 접속자", value: "100,000+", trend: "up" },
-        { label: "메시지 지연", value: "< 50ms", trend: "down" },
-        { label: "서버 가용성", value: "99.9%", trend: "stable" },
-        { label: "처리량", value: "5,000 msg/s", trend: "up" },
+        { label: "시스템 연동", value: "포인트 API", trend: "stable" },
+        { label: "배포 효율화", value: "스크립트 자동화", trend: "up" },
+        { label: "화면 구현", value: "SSR(Mustache)", trend: "stable" },
       ],
     },
     // {
@@ -281,23 +267,27 @@ function Projects() {
         "이메일 링크와 Redis 임시 토큰을 결합한 비밀번호 재설정 프로세스를 설계하여 계정 보안 수준 고도화",
       ],
       github: "https://github.com/kt-merge",
-      demo: "https://demo.example.com",
+      demo: "https://bcm.u-jinlee1029.store/",
       role: "백엔드 개발자 리드 & 인프라 설계",
       duration: "2025.11 - 진행 중",
       teamSize: "프론트엔드 2명 / 백엔드 2명 / 인프라 1명",
       architecture: "STOMP WebSocket 기반의 실시간 입찰 트랜잭션 처리, Redis Pub/Sub을 활용 확장 가능한 메시징 아키텍처",
       images: [
         {
+          url: "./projects/bcm/bcm_admin.png",
+          caption: "관리자 대시보드",
+        },
+        {
+          url: "./projects/bcm/bcm_bid_page.png",
+          caption: "경매 입찰 화면",
+        },
+        {
+          url: "./projects/bcm/system_architecture.drawio.png",
+          caption: "시스템 아키텍처 다이어그램",
+        },
+        {
           url: "./projects/bcm/chicken_erd.png",
           caption: "Project ERD",
-        },
-        {
-          url: "/kafka-monitoring-metrics-performance.jpg",
-          caption: "Kafka 모니터링",
-        },
-        {
-          url: "/data-flow-diagram-etl-process.jpg",
-          caption: "데이터 플로우",
         },
       ],
       challenges: [
@@ -320,57 +310,67 @@ function Projects() {
       ],
     },
     {
-      title: "실시간 중고 경매 플랫폼 BCM",
-      type: "personal" as const,
-      description: "STOMP 및 Redis 기반 실시간 경매 플랫폼",
-      tech: ["Java", "Spring Boot", "STOMP(WebSocket)", "Redis", "PostgreSQL", "AWS", "Github Actions", "Docker"],
-      features: [ 
-        "Redis ZSET 도입을 통한 JDBC Store 대비 처리 속도 향상 및 경매 종료 작업 유실 방지",
-        "STOMP WebSocket 도입으로 Long Polling 방식 대비 네트워크 오버헤드 감소 및 실시간 호가 반영 구축",
-        "Github Actions & Docker 기반 CI/CD 구축 및 다중 인스턴스 환경에서의 중복 실행 방지 처리",
-        "S3 Presigned URL을 적용하여 이미지 업로드 트래픽을 서버에서 분리하고 EC2 리소스 부하 최소화",
-        "RTR 도입 및 Redis 블랙리스트 전략으로 토큰 탈취 시 재사용 공격 원천 차단",
-        "이메일 링크와 Redis 임시 토큰을 결합한 비밀번호 재설정 프로세스를 설계하여 계정 보안 수준 고도화",
-      ],
-      github: "https://github.com/kt-merge",
-      demo: "https://demo.example.com",
-      role: "백엔드 개발자 리드 & 인프라 설계",
-      duration: "2025.11 - 진행 중",
-      teamSize: "프론트엔드 2명 / 백엔드 2명 / 인프라 1명",
-      architecture: "STOMP WebSocket 기반의 실시간 입찰 트랜잭션 처리, Redis Pub/Sub을 활용 확장 가능한 메시징 아키텍처",
-      images: [
-        {
-          url: "./projects/bcm/chicken_erd.png",
-          caption: "Project ERD",
-        },
-        {
-          url: "/kafka-monitoring-metrics-performance.jpg",
-          caption: "Kafka 모니터링",
-        },
-        {
-          url: "/data-flow-diagram-etl-process.jpg",
-          caption: "데이터 플로우",
-        },
-      ],
-      challenges: [
-        {
-          title: "서버 재실행 시 경매 종료 스케쥴 유실 및 운영 불안정",
-          solution: "서버 재시작 시 작업 유실 문제를 해결을 위해, Redis ZSET 기반 스케줄러를 도입 운영 안정성을 확보하고 처리 성능 개선",
-          link: "https://diligent-mangosteen-06d.notion.site/Redis-ZSET-2b61efebbf4c80289001fe529ccb9bb1?source=copy_link",
-        },
-        {
-          title: "서버를 통한 이미지 업로드 시 발생하는 메모리 부하 이슈",
-          solution: "S3 Presigned Upload URL 제공 API 구현 클라이언트가 스토리지에 직접 파일 업로드를 통한 서버 부하를 제거하고 보안성을 확보",
-          link: "https://diligent-mangosteen-06d.notion.site/Presigned-URL-9049823e48474891bc2ee72c68f33c9a?source=copy_link",
-        },
-      ],
-      metrics: [
-        { label: "처리량", value: "1TB/hour", trend: "up" },
-        { label: "처리 지연", value: "< 2 sec", trend: "down" },
-        { label: "데이터 무결성", value: "99.99%", trend: "stable" },
-        { label: "저장 효율", value: "40% 압축", trend: "up" },
-      ],
-    },
+        title: "REST API 성숙도 3단계 채용 서비스",
+        type: "personal" as const, // 개인 과제/프로젝트로 보임
+        role: "백엔드 개발 (기여도 100%)",
+        duration: "2023.10 - 2023.10",
+        teamSize: "1명 (개인 프로젝트)",
+
+        // 1. 프로젝트 설명: 기술적 목표(Level 3)와 비즈니스(채용) 결합
+        description: "신뢰성 있는 RESTful API를 자동화한 채용공고 서비스",
+
+        // 2. 사용 기술: README 및 build.gradle 기반
+        tech: ["Java", "Spring Boot", "JPA", "QueryDSL", "Spring HATEOAS", "Spring REST Docs", "H2", "JUnit5"],
+
+        // 3. 주요 기능: 구현 내용 요약
+        features: [
+          "Spring HATEOAS를 적용하여 리소스 간 링크 정보를 포함하는 Self-descriptive API 구현",
+          "Spring REST Docs를 활용해 테스트 코드 기반의 API 문서 자동 생성 및 배포",
+          "QueryDSL을 활용한 채용공고 동적 검색(회사명, 사용기술) 기능 구현",
+          "채용공고 등록/수정/삭제 및 지원자 지원 프로세스 트랜잭션 처리"
+        ],
+
+        // 4. 아키텍처: README의 'Project Tree'와 'ERD' 설명 반영
+        architecture: "DDD의 애그리거트 개념을 적용하여 도메인 간 결합을 방지한 Layered Architecture, H2 In-memory DB 사용.",
+        github: "https://github.com/u-jinlee/rest-api-maturity-three-level-project", // (확인 필요) 혹은 본인 리포지토리 링크
+        demo: "https://rest-docs.s3.ap-northeast-2.amazonaws.com/index.html",
+        images: [
+          {
+            url: "./projects/personal/restful_api.png",
+            caption: "Rest API 문서화 결과",
+          },
+          {
+            url: "./projects/personal/test_result.png", 
+            caption: "TDD 기반 통합 테스트 통과 결과",
+          },
+          {
+            url: "./projects/personal/w-pre-on-b-b.png", 
+            caption: "도메인 애그리거트 분리 설계 (ERD)",
+          },
+        ],
+
+        // 5. 트러블 슈팅 (가장 돋보이는 부분 ★)
+        challenges: [
+          {
+            title: "RESTful API (Level 3) 구현을 위한 HATEOAS 도입",
+            solution: "단순 JSON 응답을 넘어 클라이언트가 리소스 상태에 따라 전이 가능한 링크(Link)를 포함하도록 Spring HATEOAS를 적용함. 이를 통해 API의 엔드포인트가 변경되더라도 클라이언트 영향을 최소화하는 Self-descriptive Message를 구현.",
+            link: "",
+          },
+          {
+            title: "도메인 간 강결합 문제 해결 (DDD)",
+            solution: "JPA 객체 그래프 탐색의 오용을 막기 위해, 채용공고·회사·지원자 각 애그리거트 루트 간에는 객체 참조(@OneToMany) 대신 ID 참조 방식을 적용하여 도메인 간의 물리적 의존성을 낮춤.",
+            link: "",
+          },
+        ],
+
+        // 6. 정량적 성과 (기술적 성숙도 강조)
+        metrics: [
+          { label: "API 성숙도", value: "Level 3", trend: "stable" },
+          { label: "문서화", value: "REST Docs", trend: "up" },
+          { label: "테스트", value: "TDD 적용", trend: "stable" },
+          { label: "아키텍처", value: "DDD 적용", trend: "stable" },
+        ],
+      },
   ]
 
   const filteredProjects = projects.filter((project) => {
@@ -444,7 +444,7 @@ function Projects() {
                     <ul className="space-y-1">
                       {project.features.slice(0, 3).map((feature, i) => (
                         <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
-                          <span className="text-accent">•</span>
+                          <span className="text-primary">•</span>
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -494,7 +494,7 @@ function Projects() {
                               d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                             />
                           </svg>
-                          Demo
+                          사이트 방문
                         </a>
                       )}
                     </div>
@@ -516,7 +516,7 @@ function Projects() {
             className="bg-card border border-border rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="sticky top-0 bg-card border-b border-border p-6 flex items-start justify-between z-10">
+            <div className="sticky top-0 bg-card border-b border-border p-6 flex items-start justify-between z-50">
               <div>
                 <h2 className="text-2xl font-bold mb-2">{projects[selectedProject].title}</h2>
                 <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
@@ -544,13 +544,18 @@ function Projects() {
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-primary">프로젝트 자료</h3>
                 <div className="space-y-4">
-                  <div className="relative aspect-video bg-secondary/50 rounded-lg overflow-hidden border border-border">
+                  <div className="relative aspect-video bg-secondary/50 rounded-lg overflow-hidden border border-border shadow-2xl">
+                    <img
+                      src={projects[selectedProject].images[selectedImage].url || "/placeholder.svg"}
+                      alt="background"
+                      className="absolute inset-0 w-full h-full object-cover blur-2xl scale-110 opacity-80"
+                    />
                     <img
                       src={projects[selectedProject].images[selectedImage].url || "/placeholder.svg"}
                       alt={projects[selectedProject].images[selectedImage].caption}
-                      className="w-full h-full object-contain"
+                      className="relative w-full h-full object-contain z-10 drop-shadow-2xl"
                     />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 to-transparent p-4">
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 to-transparent p-4 z-20">
                       <p className="text-sm font-medium">{projects[selectedProject].images[selectedImage].caption}</p>
                     </div>
 
@@ -562,7 +567,7 @@ function Projects() {
                               prev === 0 ? projects[selectedProject].images.length - 1 : prev - 1,
                             )
                           }
-                          className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background transition-colors rounded-full p-3"
+                          className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background transition-colors rounded-full p-3 z-30"
                         >
                           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -574,7 +579,7 @@ function Projects() {
                               prev === projects[selectedProject].images.length - 1 ? 0 : prev + 1,
                             )
                           }
-                          className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background transition-colors rounded-full p-3"
+                          className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background transition-colors rounded-full p-3 z-30"
                         >
                           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -584,7 +589,12 @@ function Projects() {
                     )}
                   </div>
 
-                  <div className="grid grid-cols-4 gap-2">
+                  <div className={`grid gap-2 ${
+                    projects[selectedProject].images.length === 1 ? 'grid-cols-1' :
+                    projects[selectedProject].images.length === 2 ? 'grid-cols-2' :
+                    projects[selectedProject].images.length === 3 ? 'grid-cols-3' :
+                    'grid-cols-4'
+                  }`}>
                     {projects[selectedProject].images.map((image, index) => (
                       <button
                         key={index}
@@ -612,7 +622,7 @@ function Projects() {
                 <ul className="space-y-2">
                   {projects[selectedProject].features.map((feature, i) => (
                     <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                      <span className="text-accent mt-0.5">•</span>
+                      <span className="text-primary mt-0.5">•</span>
                       <span className="leading-relaxed">{feature}</span>
                     </li>
                   ))}
@@ -628,7 +638,12 @@ function Projects() {
 
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-primary">성과 지표</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className={`grid gap-4 ${
+                  projects[selectedProject].metrics?.length === 1 ? 'grid-cols-1' :
+                  projects[selectedProject].metrics?.length === 2 ? 'grid-cols-2' :
+                  projects[selectedProject].metrics?.length === 3 ? 'grid-cols-3' :
+                  'grid-cols-2 md:grid-cols-4'
+                }`}>
                   {projects[selectedProject].metrics?.map((metric, i) => (
                     <div key={i} className="bg-secondary/50 p-4 rounded-lg border border-border">
                       <div className="text-xs text-muted-foreground mb-1">{metric.label}</div>
@@ -742,7 +757,7 @@ function Projects() {
                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                       />
                     </svg>
-                    라이브 데모
+                    사이트 방문
                   </a>
                 )}
               </div>

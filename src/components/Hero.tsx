@@ -20,7 +20,7 @@ const Hero = () => {
             </div>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl text-left">
               클라이언트부터 서버까지 흐름을 기준으로 RESTful API와 DB를 설계하고, 트래픽을 효율적으로 처리하는 구조를 구축합니다.
-              <br /><b>사용자 경험과 성능</b>의 균형을 고려하며, 도메인 정책 예외 흐름과 트랜잭션을 설계해 <b>데이터의 정합성과 서버의 안정성</b>을 확보합니다. 
+              <br /><b>사용자 경험과 성능</b> 사이의 균형을 고려하며, 도메인 비즈니스 정책 예외 흐름 및 트랜잭션을 설계해 <b>데이터의 정합성과 서버의 안정성</b>을 확보합니다. 
             </p>
 
             <div className="flex items-center gap-4 justify-center md:justify-start">
@@ -50,16 +50,17 @@ const Hero = () => {
                 </svg>
               </a>
               <a
-                href="mailto:yoojinlee.dev@gmail.com"
+                href="./yoojinleedev_STC.pdf"
+                download
                 className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="Email"
+                aria-label="성격 유형 다운로드"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"
                   />
                 </svg>
               </a>
