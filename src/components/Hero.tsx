@@ -3,27 +3,14 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center px-4 py-12">
       <div className="container mx-auto max-w-4xl">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex flex-col items-center gap-4">
             <img
               src="/profile.jpg"
               alt="Profile photo of 이유진, Backend Engineer"
               className="w-40 h-40 md:w-48 md:h-48 rounded-full object-contain border-4 border-primary/20 bg-white grayscale hover:grayscale-0 transition-all duration-300"
             />
-          </div>
-
-          <div className="space-y-6 text-center md:text-left">
-            <div className="space-y-0">
-              <p className="text-lg md:text-xl text-foreground text-left"><span className="text-primary"><b>요청</b></span>부터 <span className="text-primary"><b>응답</b></span>까지</p>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight text-left">
-                데이터의 흐름으로 문제를 푸는 <span className="text-primary"><b>백엔드 엔지니어</b></span> 이유진입니다.
-              </h1>
-            </div>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl text-left">
-              클라이언트부터 서버까지 흐름을 기준으로 RESTful API와 DB를 설계하고, 트래픽을 효율적으로 처리하는 구조를 구축합니다.
-              <br /><b>사용자 경험과 성능</b> 사이의 균형을 고려하며, 도메인 비즈니스 정책 예외 흐름 및 트랜잭션을 설계해 <b>데이터의 정합성과 서버의 안정성</b>을 확보합니다. 
-            </p>
-
-            <div className="flex items-center gap-4 justify-center md:justify-start">
+            
+            <div className="flex items-center gap-5">
               <a
                 href="https://github.com/U-jinLee"
                 target="_blank"
@@ -65,6 +52,53 @@ const Hero = () => {
                 </svg>
               </a>
             </div>
+          </div>
+
+          <div className="space-y-6 text-center md:text-left">
+            <div className="space-y-0">
+              <p className="text-lg md:text-xl text-foreground text-left"><span className="text-primary"><b>요청</b></span>부터 <span className="text-primary"><b>응답</b></span>까지,</p>
+              <h1 className="text-4xl md:text-4xl font-bold leading-tight text-left">
+                데이터 흐름 너머의 사용자 가치를 연결하는 <span className="text-primary"><b>백엔드 엔지니어</b></span> 이유진입니다.
+              </h1>
+            </div>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl text-left">
+              클라이언트부터 서버까지 흐름을 기준으로 RESTful API와 DB를 설계하고, 트래픽을 효율적으로 처리하는 구조를 구축합니다.
+              <br /><b>사용자 경험과 성능</b> 사이의 Trade-Off를 고려해 도메인 비즈니스 정책 및 트랜잭션을 설계해 <b>데이터의 정합성</b>과 <b>서버의 안정성</b>을 확보합니다. 
+              <br />백엔드 개발을 넘어 인프라 설계, 프론트엔드 구현까지 서비스의 A to Z를 경험하며 <b>넓은 시야를 길렀습니다</b>. 이러한 시야를 바탕으로 기술적 깊이를 비즈니스 가치에 녹여내기 위해 늘 고민합니다.
+            </p>
+            
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="mailto:yoojinlee.dev@gmail.com"
+                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors justify-center md:justify-start group"
+              >
+                <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <span className="text-base md:text-lg">yoojinlee.dev@gmail.com</span>
+              </a>
+
+              <a
+                href="tel:+821094375946"
+                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors justify-center md:justify-start group"
+              >
+                <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <span className="text-base md:text-lg">+82 10-9437-5946</span>
+              </a>
+            </div>
+
           </div>
         </div>
         <div className="grid grid-cols-3 gap-6 pt-8">

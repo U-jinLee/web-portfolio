@@ -303,10 +303,9 @@ function Projects() {
         },
       ],
       metrics: [
-        { label: "처리량", value: "1TB/hour", trend: "up" },
-        { label: "처리 지연", value: "< 2 sec", trend: "down" },
-        { label: "데이터 무결성", value: "99.99%", trend: "stable" },
-        { label: "저장 효율", value: "40% 압축", trend: "up" },
+        { label: "실시간성", value: "WebSocket 적용", trend: "up" },
+        { label: "스케줄링", value: "자동 마감 처리", trend: "stable" },   
+        { label: "배포 속도", value: "20분 → 3분", trend: "up" },
       ],
     },
     {

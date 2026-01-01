@@ -17,6 +17,7 @@ export function Education() {
     {
       period: "2025.09 - 진행 중",
       organization: "(주)케이티클라우드",
+      url: "./grown_up.pdf",
       program: "[kt cloud] 풀스택 과정",
       description: [
         "클라우드 네이티브 환경에서 풀스택 개발 역량 강화",
