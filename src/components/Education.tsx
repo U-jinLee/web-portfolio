@@ -171,21 +171,7 @@ export function Education() {
                   <div className="space-y-4">
                     <div>
                       <div className="text-sm text-muted-foreground font-mono mb-2">{item.period}</div>
-                      {item.url ? (
-                        <a 
-                          href={item.url} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-2xl font-bold text-balance hover:text-primary transition-colors inline-flex items-center gap-2"
-                        >
-                          {item.name}
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                          </svg>
-                        </a>
-                      ) : (
                         <h4 className="text-2xl font-bold text-balance">{item.name}</h4>
-                      )}
                       <p className="text-lg text-muted-foreground">{item.role}</p>
                     </div>
                   </div>

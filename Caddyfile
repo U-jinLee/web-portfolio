@@ -1,0 +1,4 @@
+portfolio.u-jinlee1029.store {
+    reverse_proxy web:80
+    encode gzip
+}
