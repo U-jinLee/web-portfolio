@@ -166,7 +166,7 @@ function Projects() {
     {
       title: "포인트 적립형 쇼핑몰 애즈워드",
       type: "company" as const,
-      description: "면세몰 상품 도메인 API 개발 및 고도화 담당",
+      description: "포인트 기반 쇼핑몰 애즈워드 어드민 개발",
       tech: ["Java", "Spring Boot", "QueryDSL", "MySQL", "Mustache", "AWS"],
       features: [
       "WebClient를 활용한 외부 포인트 시스템 연동",
