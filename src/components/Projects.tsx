@@ -8,6 +8,7 @@ function Projects() {
   const projects = [
     {
       title: "제주스타렌터카 예약·결제 브릿지 서버",
+      thumbnail: "./projects/zzimcar/star_booking.png",
       type: "company" as const,
       description: "실시간 예약·결제 중개 브릿지 서버 구축",
       tech: ["Java", "Spring Boot", "Spring Security", "QueryDSL", "MySQL", "Thymeleaf", "Apache POI"],
@@ -66,6 +67,7 @@ function Projects() {
     },
     {
       title: "대한항공 SKY SHOP 상품 도메인 API",
+      thumbnail: "./projects/tenth/korean_air_product_english.png",
       type: "company" as const,
       description: "상품 도메인 API 고도화 및 조회 성능 최적화",
       tech: ["Java", "Spring Boot", "JPA", "QueryDSL", "MySQL", "Redis", "AWS"],
@@ -117,6 +119,7 @@ function Projects() {
     },
     {
       title: "대한축구협회 PLAY KFA 쇼핑몰 구축",
+      thumbnail: "./projects/tenth/main.png",
       type: "company" as const,
       description: "KFA 공식 굿즈 판매 및 이벤트 관리를 위한 커머스 플랫폼",
       tech: ["Java", "Spring Boot", "QueryDSL", "MySQL", "Mustache"],
@@ -165,6 +168,7 @@ function Projects() {
     },
     {
       title: "포인트 적립형 쇼핑몰 애즈워드",
+      thumbnail: "./projects/tenth/adsward_main.png",
       type: "company" as const,
       description: "포인트 기반 쇼핑몰 애즈워드 어드민 개발",
       tech: ["Java", "Spring Boot", "QueryDSL", "MySQL", "Mustache", "AWS"],
@@ -255,6 +259,7 @@ function Projects() {
     // },
     {
       title: "실시간 중고 경매 플랫폼 BCM",
+      thumbnail: "./projects/bcm/bcm_bid_page.png",
       type: "personal" as const,
       description: "STOMP 및 Redis 기반 실시간 경매 플랫폼",
       tech: ["Java", "Spring Boot", "STOMP(WebSocket)", "Redis", "PostgreSQL", "AWS", "Github Actions", "Docker"],
@@ -310,6 +315,7 @@ function Projects() {
     },
     {
         title: "REST API 성숙도 3단계 채용 서비스",
+        thumbnail: "./projects/personal/restful_api.png",
         type: "personal" as const, // 개인 과제/프로젝트로 보임
         role: "백엔드 개발 (기여도 100%)",
         duration: "2023.10 - 2023.10",
@@ -421,10 +427,20 @@ function Projects() {
                   setSelectedProject(projects.indexOf(project))
                   setSelectedImage(0)
                 }}
-                className="bg-card border border-border rounded-lg p-6 hover:border-primary transition-all cursor-pointer hover:shadow-lg hover:shadow-primary/10 w-full md:w-[calc(50%-1rem)] lg:w-[calc(50%-1rem)]"
+                className="bg-card border border-border rounded-lg overflow-hidden hover:border-primary transition-all cursor-pointer hover:shadow-lg hover:shadow-primary/10 w-full md:w-[calc(50%-1rem)] lg:w-[calc(50%-1rem)]"
               >
-                <div className="flex items-start justify-between gap-3 mb-3">
-                  <h3 className="text-xl font-bold flex-1">{project.title}</h3>
+                {project.thumbnail && (
+                  <div className="aspect-video w-full overflow-hidden bg-secondary/50">
+                    <img
+                      src={project.thumbnail}
+                      alt={project.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                )}
+                <div className="p-6">
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <h3 className="text-xl font-bold flex-1">{project.title}</h3>
                   <span
                     className={`px-2 py-0.5 rounded text-xs font-medium shrink-0 whitespace-nowrap ${
                       project.type === "company"
@@ -499,6 +515,7 @@ function Projects() {
                     </div>
                     <span className="text-xs text-muted-foreground">더보기 →</span>
                   </div>
+                </div>
                 </div>
               </div>
             ))}

@@ -61,10 +61,10 @@ const Hero = () => {
                 데이터 흐름 너머의 사용자 가치를 연결하는 <span className="text-primary"><b>백엔드 엔지니어</b></span> 이유진입니다.
               </h1>
             </div>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl text-left">
-              3년 차 개발자로 다양한 <b>엔터프라이즈 솔루션 구축</b> 경험을 통해 비즈니스 로직을 기술로 구현하는 역량을 길렀으며, 자체 <b>프로덕트 운영 효율화</b>를 통해 서비스의 안정적 성장에 이바지했습니다.
-              <br />백엔드 개발의 핵심은 단순한 기능 구현을 넘어 서비스의 라이프사이클을 이해하고 그 흐름을 최적화하는 데 있다고 생각합니다.
-              <br />백엔드를 주축으로 인프라 설계와 프론트엔드 구현까지 서비스의 A to Z를 경험하며 <b>넓은 시야를 길렀습니다</b>. 이러한 시야를 바탕으로 기술적 깊이를 비즈니스에 녹여내기 위해 늘 고민합니다.
+            <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-2xl text-left">
+              다양한 <b>엔터프라이즈 솔루션 구축</b>과 <b>서비스 운영 최적화</b>를 바탕으로 비즈니스 가치 실현과 서비스 성장을 주도했습니다.
+              <br />소프트웨어 개발은 단순한 기능 구현이 아닌, 도메인을 이해하고 비즈니스 흐름을 최적화하는 데 있다고 믿습니다.
+              <br />백엔드를 중심으로 인프라와 프론트엔드까지 경험하며 <b>폭넓은 관점</b>을 갖췄고, 이를 바탕으로 기술을 비즈니스 가치로 전환하는 데 집중합니다.
             </p>
             
             <div className="flex flex-wrap gap-4">
@@ -103,15 +103,15 @@ const Hero = () => {
         </div>
         <div className="grid grid-cols-3 gap-6 pt-8">
           <div className="bg-card border border-border rounded-lg p-6">
-            <div className="text-3xl font-bold text-primary mb-2">3<span className="text-xl">+</span></div>
+            <div className="text-3xl font-bold text-primary mb-2">3<span className="text-xl"> +</span></div>
             <div className="text-muted-foreground">년 경력</div>
           </div>
           <div className="bg-card border border-border rounded-lg p-6">
-            <div className="text-3xl font-bold text-primary mb-2">6<span className="text-xl">+</span></div>
+            <div className="text-3xl font-bold text-primary mb-2">6<span className="text-xl"> +</span></div>
             <div className="text-muted-foreground">프로젝트</div>
           </div>
           <div className="bg-card border border-border rounded-lg p-6">
-            <div className="text-3xl font-bold text-primary mb-2">10<span className="text-xl">+</span></div>
+            <div className="text-3xl font-bold text-primary mb-2">10<span className="text-xl"> +</span></div>
             <div className="text-muted-foreground">기술스택</div>
           </div>
         </div>
