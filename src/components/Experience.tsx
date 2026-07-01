@@ -1,6 +1,17 @@
 const Experience = () => {
   const experiences = [
     {
+      period: "2026.02 - 2026.05",
+      company: "주식회사 트리노드",
+      position: "정규직 · 코어셀 파트 · AI 엔지니어",
+      description: [
+        "AI 콘텐츠 생성 플랫폼 'Oven' 기능 개발 및 클라우드 인프라 구축",
+        "CloudFront CDN·GPU 서버 자동 할당 등 AWS 인프라 구축",
+        "FSD 아키텍처 마이그레이션 및 AI 에이전트 개발 자동화 하네스 구축",
+      ],
+      tags: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "AWS", "Terraform", "Gemini"],
+    },
+    {
       period: "2023.04 - 2023.09",
       company: "주식회사네이처모빌리티",
       position: "정규직 · MaaS 연구팀 · 백엔드 개발자",

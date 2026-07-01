@@ -7,6 +7,54 @@ function Projects() {
 
   const projects = [
     {
+      title: "AI 콘텐츠 생성 플랫폼 Oven",
+      thumbnail: "./projects/oven/oven_content_sample.jpeg",
+      type: "company" as const,
+      description: "사내 게임 리소스 생성 플랫폼. 프로젝트의 AX 전환을 주도하며 기능 개발부터 인프라·아키텍처 표준화까지 코드베이스 전반 담당, 팀 내 커밋·변경량 1위를 기록",
+      tech: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "AWS", "Terraform", "Lambda", "CloudFront"],
+      features: [
+        "Gemini 임베딩으로 이미지·오디오·비디오를 키워드와 의미로 한 번에 찾는 하이브리드 검색 구현",
+        "CloudFront CDN을 신설해 이미지·파일 요청을 분산 처리하여 서버 부하를 낮추고, 서명 쿠키로 로그인한 사용자만 접근하도록 제어",
+        "자동화 스킬과 다단계 검증 게이트를 갖춰 AI 에이전트가 코드를 안전하게 생성·검증하는 하네스 개발 환경 구축",
+        "요청 급증 시 Prewarmed Server를 자동 배정하는 서버리스 시스템을 Terraform으로 구축",
+        "제각각이던 47개 API의 에러 처리를 공통 핸들러 하나로 통일하고, 응답 형식 표준화 및 Sentry 자동 리포팅 연동",
+        "1,000줄이 넘는 대형 파일 7개를 모듈 단위로 분할하고, FSD 아키텍처 위반 132건·ESLint 부채 168건 정리",
+      ],
+      github: "",
+      demo: "",
+      role: "AI 엔지니어 · 기능 개발 및 인프라 구축",
+      duration: "2026.02 - 2026.05",
+      teamSize: "코어셀 파트",
+      architecture:
+        "Next.js(App Router)·Supabase(PostgreSQL) 기반 풀스택, AWS CloudFront·Lambda·DynamoDB 서버리스 인프라를 Terraform으로 구성, FSD(Feature-Sliced Design) 아키텍처 적용",
+      images: [
+        {
+          url: "./projects/oven/oven_content_sample.jpeg",
+          caption: "프로젝트 대표 이미지 (©Treenod)",
+        },
+      ],
+      challenges: [
+        {
+          title: "AI 생성 트래픽이 몰릴 때 GPU 서버 할당 정보가 유실되는 문제",
+          solution:
+            "동시에 많은 생성 요청이 들어오면 미리 띄워둔 GPU 서버의 할당 정보가 꼬이거나 어디에도 연결되지 않는 상태가 생겼습니다. 할당 처리를 두 단계로 나눠 안전하게 기록하고 처리 중 상태를 따로 표시해, 트래픽이 몰려도 안정적으로 서버가 배정되도록 개선했습니다.",
+          link: "",
+        },
+        {
+          title: "라우트마다 제각각이던 API 에러 처리",
+          solution:
+            "각 API가 서로 다른 방식으로 오류를 응답해 클라이언트 대응이 어려웠습니다. 공통 처리 함수 하나로 응답 형식을 통일하고 오류 발생 시 사용자·요청 정보를 자동으로 수집하도록 만들어, 47개 API를 한 번에 정리했습니다.",
+          link: "",
+        },
+      ],
+      metrics: [
+        { label: "3개월 기여도", value: "커밋·변경량 팀 1위", trend: "up" },
+        { label: "머지 커밋", value: "약 634건", trend: "up" },
+        { label: "대형 파일 분할", value: "2,158줄 → 394줄", trend: "down" },
+        { label: "API 표준화", value: "47개 라우트", trend: "up" },
+      ],
+    },
+    {
       title: "제주스타렌터카 예약·결제 브릿지 서버",
       thumbnail: "./projects/zzimcar/star_booking.png",
       type: "company" as const,
@@ -611,6 +659,7 @@ function Projects() {
             </div>
 
             <div className="p-6 space-y-8">
+              {projects[selectedProject].images.length > 0 && (
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-primary">프로젝트 자료</h3>
                 <div className="space-y-4">
@@ -686,6 +735,7 @@ function Projects() {
                   </div>
                 </div>
               </div>
+              )}
 
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-primary">주요 기능</h3>
