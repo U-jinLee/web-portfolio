@@ -1,4 +1,22 @@
 const Skills = () => {
+  const aiSkills = [
+    {
+      techs: "LLM 연동 (Gemini, GPT)",
+      description:
+        " Gemini 임베딩 기반 멀티모달 검색을 구현하고, 외부 생성 모델(GPT·이미지·영상)을 오케스트레이션해 실시간 생성 파이프라인을 구축했습니다.",
+    },
+    {
+      techs: "Embedding & Hybrid Search",
+      description:
+        " 이미지·오디오·비디오 임베딩을 통합 저장하고, 키워드 검색과 의미(벡터) 검색을 결합한 하이브리드 검색을 설계했습니다.",
+    },
+    {
+      techs: "AI Agent & MCP",
+      description:
+        " Claude Code 기반 개발 자동화 하네스를 구축하고, MCP로 외부 도구(문서 조회·메모리·브라우저 디버깅 등)를 연동해 에이전트 워크플로우를 표준화했습니다.",
+    },
+  ]
+
   const backendSkills = [
     {
       techs: "Java, Spring Boot",
@@ -61,6 +79,10 @@ const Skills = () => {
       description: " EC2, RDS, S3를 연동해 서비스 인프라를 구축했습니다. ECR을 활용해 배포 이미지를 관리하며, Route 53을 통해 도메인 연결 및 DNS 설정을 수행했습니다.",
     },
     {
+      techs: "IaC (Terraform)",
+      description: " CloudFront CDN·Lambda·DynamoDB 등 AWS 서버리스 인프라를 Terraform으로 코드화해 관리했습니다. 반복 가능하고 버전 관리되는 인프라 구성으로 재현성과 변경 이력을 확보했습니다.",
+    },
+    {
       techs: "Web Server & Reverse Proxy (Caddy, Nginx)",
       description: " Caddy를 도입해 SSL(HTTPS) 인증서 관리를 자동화했으며, 80/443 포트 요청을 프론트엔드 및 백엔드 서버로 라우팅하는 리버스 프록시 환경을 구축했습니다.",
     },
@@ -97,6 +119,21 @@ const Skills = () => {
         </div>
 
         <div className="space-y-6">
+          <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-1 h-8 bg-primary rounded-full"></div>
+              <h3 className="text-2xl font-bold">AI 엔지니어링</h3>
+            </div>
+            <ul className="space-y-4">
+              {aiSkills.map((skill, index) => (
+                <li key={index} className="text-sm md:text-base leading-relaxed pl-4 border-l-2 border-muted">
+                  <span className="text-primary font-bold">{skill.techs}</span><br />
+                  <span className="text-foreground/90">{skill.description}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-8 bg-primary rounded-full"></div>
