@@ -258,6 +258,60 @@ function Projects() {
     //   ],
     // },
     {
+      title: "타투 스튜디오 OAA STUDIO",
+      thumbnail: "./projects/oaastudio/oaastudio_main.png",
+      type: "personal" as const,
+      description: "타투 스튜디오의 브랜드·아티스트 예약용 웹사이트",
+      tech: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "shadcn/ui", "Vercel"],
+      features: [
+        "Next.js App Router로 브랜드·소개·아티스트·게스트 페이지를 구성하고 모바일까지 대응하는 반응형 UI 구현",
+        "아티스트 이름을 누르면 작품이 펼쳐지는 아코디언 UI를 좌우 교차 배치와 부드러운 등장 애니메이션으로 직접 구현",
+        "마우스로 끌어 넘기는 작품 갤러리와 키보드로 조작 가능한 전체 화면 이미지 뷰어 구현",
+        "이미지 자동 최적화와 지연 로딩을 적용해 작품 사진이 많아도 빠르게 열리도록 로딩 속도 개선",
+        "아티스트별로 구분되는 온라인 예약 폼을 연동해 상담·예약 문의 창구를 하나로 통합",
+        "Vercel로 배포하고 방문자 분석을 연동, 사용자의 화면 테마에 따라 밝은·어두운 아이콘이 자동으로 바뀌도록 구현",
+      ],
+      github: "",
+      demo: "https://oaastudio.com/",
+      role: "프론트엔드 개발 & 배포 (1인)",
+      duration: "2026.05 - 2026.07",
+      teamSize: "1명 (개인 프로젝트)",
+      architecture:
+        "Next.js 16 App Router 기반 서버/클라이언트 컴포넌트 분리, 아티스트 데이터를 단일 모듈(lib/artists.ts)로 분리한 데이터 주도 렌더링, Vercel 서버리스 배포",
+      images: [
+        {
+          url: "./projects/oaastudio/oaastudio_main.png",
+          caption: "메인 페이지",
+        },
+        {
+          url: "./projects/oaastudio/oaastudio_artist.png",
+          caption: "아티스트 소개 (Artist Explorer)",
+        },
+        {
+          url: "./projects/oaastudio/oaastudio_works.png",
+          caption: "아티스트별 작품 캐러셀",
+        },
+        {
+          url: "./projects/oaastudio/oaastudio_gallery.png",
+          caption: "포트폴리오 라이트박스",
+        },
+      ],
+      challenges: [
+        {
+          title: "기존에 쓰던 도메인을 Vercel에 연결했을 때 사이트가 열리지 않던 문제",
+          solution:
+            "다른 업체에 등록된 도메인을 Vercel에 연결했지만 계속 예전 주소를 가리켜 사이트가 열리지 않았습니다. 도메인 등록업체 관리 페이지에서 Vercel이 안내한 DNS 레코드로 직접 교체하고 전파를 기다린 뒤 정상 접속을 확인했습니다.",
+          link: "",
+        },
+      ],
+      metrics: [
+        { label: "프레임워크", value: "Next.js 16 / React 19", trend: "stable" },
+        { label: "배포", value: "Vercel 실서비스", trend: "up" },
+        { label: "인터랙션", value: "커스텀 캐러셀·라이트박스", trend: "up" },
+        { label: "반응형", value: "모바일 대응", trend: "stable" },
+      ],
+    },
+    {
       title: "실시간 중고 경매 플랫폼 BCM",
       thumbnail: "./projects/bcm/bcm_bid_page.png",
       type: "personal" as const,
@@ -700,6 +754,7 @@ function Projects() {
                 </div>
               </div>
 
+              {projects[selectedProject].challenges && projects[selectedProject].challenges.length > 0 && (
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-primary">기술적 챌린지 및 해결</h3>
                 <div className="space-y-4">
@@ -729,6 +784,7 @@ function Projects() {
                   ))}
                 </div>
               </div>
+              )}
 
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-primary">기술 스택</h3>

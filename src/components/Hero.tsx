@@ -56,14 +56,14 @@ const Hero = () => {
 
           <div className="space-y-6 text-center md:text-left">
             <div className="space-y-0">
-              <p className="text-lg md:text-xl text-foreground text-left"><span className="text-primary"><b>요청</b></span>부터 <span className="text-primary"><b>응답</b></span>까지,</p>
+              <p className="text-lg md:text-xl text-foreground text-left"><span className="text-primary"><b>백엔드</b></span> 기반의 <span className="text-primary"><b>AI</b></span> 엔지니어,</p>
               <h1 className="text-4xl md:text-4xl font-bold leading-tight text-left">
-                데이터 흐름 너머의 사용자 가치를 연결하는 <span className="text-primary"><b>백엔드 엔지니어</b></span> 이유진입니다.
+                데이터 너머 사용자 가치를 연결하는 <span className="text-primary"><b>개발자</b></span> 이유진입니다.
               </h1>
             </div>
             <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-2xl text-left">
-              다양한 <b>엔터프라이즈 솔루션 구축</b>과 <b>서비스 운영 최적화</b>를 바탕으로 비즈니스 가치 실현과 서비스 성장을 주도했습니다.
-              <br />소프트웨어 개발은 단순한 기능 구현이 아닌, 도메인을 이해하고 비즈니스 흐름을 최적화하는 데 있다고 믿습니다.
+              백엔드 개발자로서 다양한 <b>솔루션 구축</b>과 <b>서비스 운영 최적화</b>를 경험하며 비즈니스 가치 실현과 서비스 성장을 주도했습니다.
+              <br />AI 시대에서 소프트웨어 개발은 단순한 기능 구현이 아닌, 도메인을 이해하고 비즈니스 흐름을 최적화하는 데 있다 생각합니다.
               <br />백엔드를 중심으로 인프라와 프론트엔드까지 경험하며 <b>폭넓은 관점</b>을 갖췄고, 이를 바탕으로 기술을 비즈니스 가치로 전환하는 데 집중합니다.
             </p>
             
@@ -107,7 +107,7 @@ const Hero = () => {
             <div className="text-muted-foreground">년 경력</div>
           </div>
           <div className="bg-card border border-border rounded-lg p-6">
-            <div className="text-3xl font-bold text-primary mb-2">6<span className="text-xl"> +</span></div>
+            <div className="text-3xl font-bold text-primary mb-2">7<span className="text-xl"> +</span></div>
             <div className="text-muted-foreground">프로젝트</div>
           </div>
           <div className="bg-card border border-border rounded-lg p-6">

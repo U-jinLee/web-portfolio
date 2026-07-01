@@ -12,8 +12,8 @@ function App() {
       <RightNavigation />
       <main>
         <Hero />
-        <Skills />
         <Projects />
+        <Skills />
         <Experience />
         <Education />
       </main>
